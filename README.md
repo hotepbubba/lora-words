@@ -14,6 +14,7 @@ lookups only have to happen once per model.
    pip install -r requirements.txt
    ```
 
+
    On Windows you can use the provided helper script, which creates a virtual
    environment (defaults to `.venv`) and installs the requirements into it:
 
@@ -25,6 +26,8 @@ lookups only have to happen once per model.
    and use the same location with `run.bat --venv path\to\venv` when launching the
    sync script.
 
+=======
+
 2. Run the synchronisation script, pointing it at the directory that contains
 your LoRA models:
 
@@ -32,12 +35,15 @@ your LoRA models:
    python lora_trigger_sync.py /path/to/lora/directory --database trigger_words.json
    ```
 
+
    On Windows, the companion `run.bat` activates the virtual environment created
    by `install.bat` and forwards any additional arguments to the Python script:
 
    ```bat
    run.bat "D:\\Models" --database trigger_words.json --force
    ```
+
+=======
 
    Provide a `--api-token` if you have a CivitAI personal access token, and set
    `--force` to refresh entries that already exist in the JSON database.
